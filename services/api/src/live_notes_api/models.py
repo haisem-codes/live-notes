@@ -34,7 +34,9 @@ RegionKind = Literal["text", "figure", "part"]
 
 
 class Model(BaseModel):
-    model_config = ConfigDict(extra="forbid", populate_by_name=True)
+    # serialize_by_alias: a plain model_dump()/model_dump_json() must emit protocol field names
+    # (DiagramEdge "from", not "from_") even when a caller forgets by_alias=True.
+    model_config = ConfigDict(extra="forbid", populate_by_name=True, serialize_by_alias=True)
 
 
 def dump(m: BaseModel) -> dict[str, Any]:

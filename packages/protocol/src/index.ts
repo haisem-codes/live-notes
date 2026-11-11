@@ -227,6 +227,19 @@ export type OpType = Op['type'];
  * slide.annotation.remove Removes by id. No-op on an unknown id.
  * slide.set               current_slide = slide.
  * section.close           Appends {heading_id, summary} to sections.
+ *
+ * Conventions shared by every implementation (settled during the Phase 0 build):
+ *
+ * - Section: runs from an h1/h2 block to the next heading of the same or higher level. A section is
+ *   closed once a section.close names its heading. The active section is everything outside closed
+ *   sections.
+ * - tick_id: "t{n}" for agent ticks, "u{n}" for user actions, unique per session.
+ * - src_t0_ms / src_t1_ms are per op (the span of the segments that op cites), not per tick.
+ * - Timing of a block or annotation is not stored on it: it appears at the t_emit_ms of the op that
+ *   created it, and "the moment it came from" is src_t0_ms of that op.
+ * - t_emit_ms never decreases as seq increases.
+ * - Ops the validator rejects are not part of this log. The server records them separately
+ *   (rejections.jsonl in a stored session) for evaluation.
  */
 export const EMPTY_DOCUMENT: NotesDocument = {
   blocks: [],
