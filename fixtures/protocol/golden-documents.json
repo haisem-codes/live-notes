@@ -1,0 +1,73 @@
+{
+  "description": "Expected fold of golden-ops.jsonl at several playhead positions. Every reducer (TypeScript and Python) must reproduce these exactly.",
+  "cases": [
+    {
+      "t_ms": -1,
+      "document": { "blocks": [], "annotations": [], "current_slide": null, "sections": [] }
+    },
+    {
+      "t_ms": 20000,
+      "document": {
+        "blocks": [
+          { "id": "b1", "kind": "h1", "depth": 0, "text": "Gradient descent", "status": "tentative", "src": ["s1"], "slide": 1, "rev": 1, "diagram": null },
+          { "id": "b2", "kind": "bullet", "depth": 1, "text": "minimise loss L(theta) iteratively", "status": "tentative", "src": ["s1"], "slide": 1, "rev": 1, "diagram": null },
+          { "id": "b3", "kind": "formula", "depth": 1, "text": "$\\theta \\leftarrow \\theta - \\eta \\nabla L(\\theta)$", "status": "tentative", "src": ["s2", "s4"], "slide": 1, "rev": 2, "diagram": null }
+        ],
+        "annotations": [
+          { "id": "a1", "slide": 1, "style": "highlight", "rects": [{ "x": 0.1, "y": 0.3, "w": 0.5, "h": 0.08 }], "region": "r2", "quote": null, "note": "b3" }
+        ],
+        "current_slide": 1,
+        "sections": []
+      }
+    },
+    {
+      "t_ms": 42000,
+      "document": {
+        "blocks": [
+          { "id": "b1", "kind": "h1", "depth": 0, "text": "Gradient descent", "status": "tentative", "src": ["s1"], "slide": 1, "rev": 1, "diagram": null },
+          { "id": "b5", "kind": "bullet", "depth": 1, "text": "stop when gradient ~ 0", "status": "tentative", "src": ["s6"], "slide": 2, "rev": 1, "diagram": null },
+          { "id": "b3", "kind": "formula", "depth": 1, "text": "$\\theta \\leftarrow \\theta - \\eta \\nabla L(\\theta)$", "status": "tentative", "src": ["s2", "s4"], "slide": 1, "rev": 2, "diagram": null },
+          { "id": "b4", "kind": "definition", "depth": 1, "text": "eta = learning rate; too large -> diverges", "status": "tentative", "src": ["s5"], "slide": 1, "rev": 1, "diagram": null },
+          {
+            "id": "d1", "kind": "diagram", "depth": 0, "text": "Update loop", "status": "tentative", "src": ["s6"], "slide": null, "rev": 1,
+            "diagram": {
+              "layout": "LR",
+              "nodes": [{ "id": "n1", "label": "theta" }, { "id": "n2", "label": "grad L(theta)" }, { "id": "n3", "label": "theta - eta * grad" }],
+              "edges": [{ "from": "n1", "to": "n2", "label": null }, { "from": "n2", "to": "n3", "label": "step" }, { "from": "n3", "to": "n1", "label": null }]
+            }
+          }
+        ],
+        "annotations": [
+          { "id": "a1", "slide": 1, "style": "highlight", "rects": [{ "x": 0.1, "y": 0.3, "w": 0.5, "h": 0.08 }], "region": "r2", "quote": null, "note": "b3" },
+          { "id": "a2", "slide": 2, "style": "circle", "rects": [{ "x": 0.55, "y": 0.4, "w": 0.3, "h": 0.35 }], "region": "r1", "quote": null, "note": null }
+        ],
+        "current_slide": 2,
+        "sections": []
+      }
+    },
+    {
+      "t_ms": 60000,
+      "document": {
+        "blocks": [
+          { "id": "b1", "kind": "h1", "depth": 0, "text": "Gradient descent", "status": "frozen", "src": ["s1"], "slide": 1, "rev": 1, "diagram": null },
+          { "id": "b5", "kind": "bullet", "depth": 1, "text": "stop when gradient ~ 0", "status": "frozen", "src": ["s6"], "slide": 2, "rev": 1, "diagram": null },
+          { "id": "b3", "kind": "formula", "depth": 1, "text": "$\\theta \\leftarrow \\theta - \\eta \\nabla L(\\theta)$", "status": "frozen", "src": ["s2", "s4"], "slide": 1, "rev": 2, "diagram": null },
+          { "id": "b4", "kind": "definition", "depth": 1, "text": "eta = learning rate; too large -> diverges", "status": "frozen", "src": ["s5"], "slide": 1, "rev": 1, "diagram": null },
+          {
+            "id": "d1", "kind": "diagram", "depth": 0, "text": "Update loop (revised)", "status": "frozen", "src": ["s6", "s9"], "slide": null, "rev": 2,
+            "diagram": {
+              "layout": "TB",
+              "nodes": [{ "id": "n1", "label": "theta" }, { "id": "n2", "label": "theta - eta * grad" }],
+              "edges": [{ "from": "n1", "to": "n2", "label": "step" }]
+            }
+          }
+        ],
+        "annotations": [
+          { "id": "a1", "slide": 1, "style": "highlight", "rects": [{ "x": 0.1, "y": 0.3, "w": 0.5, "h": 0.08 }], "region": "r2", "quote": null, "note": "b3" }
+        ],
+        "current_slide": 2,
+        "sections": [{ "heading_id": "b1", "summary": "Gradient descent update rule and learning rate" }]
+      }
+    }
+  ]
+}
