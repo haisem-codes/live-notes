@@ -320,3 +320,5 @@ export type ServerMessage =
   | { type: 'live'; last_seq: number }
   | { type: 'status'; state: 'listening' | 'catching_up' | 'ended' | 'server_restarting' }
   | { type: 'error'; code: string; message: string };
+
+export * from './reducer';

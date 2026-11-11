@@ -1,0 +1,241 @@
+{
+  "id": "demo-gradient-descent",
+  "title": "Gradient descent: a scripted mini-lecture",
+  "duration_ms": 154000,
+  "audio": null,
+  "slides": [
+    {
+      "index": 1,
+      "image_url": "slides/slide-1.svg",
+      "width": 1280,
+      "height": 720,
+      "regions": [
+        {
+          "id": "r1",
+          "kind": "text",
+          "label": "Gradient descent",
+          "rect": {
+            "x": 0.0688,
+            "y": 0.1882,
+            "w": 0.507,
+            "h": 0.1372
+          }
+        },
+        {
+          "id": "r2",
+          "kind": "text",
+          "label": "How a model learns by walking downhill",
+          "rect": {
+            "x": 0.0688,
+            "y": 0.3287,
+            "w": 0.4875,
+            "h": 0.0578
+          }
+        },
+        {
+          "id": "r3",
+          "kind": "text",
+          "label": "Goal: minimise the loss L(θ)",
+          "rect": {
+            "x": 0.1078,
+            "y": 0.5455,
+            "w": 0.3953,
+            "h": 0.0686
+          }
+        },
+        {
+          "id": "r4",
+          "kind": "text",
+          "label": "Follow the slope downhill",
+          "rect": {
+            "x": 0.1078,
+            "y": 0.6566,
+            "w": 0.3539,
+            "h": 0.0686
+          }
+        },
+        {
+          "id": "r5",
+          "kind": "text",
+          "label": "Repeat until the slope is flat",
+          "rect": {
+            "x": 0.1078,
+            "y": 0.7677,
+            "w": 0.4227,
+            "h": 0.0686
+          }
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "image_url": "slides/slide-2.svg",
+      "width": 1280,
+      "height": 720,
+      "regions": [
+        {
+          "id": "r1",
+          "kind": "text",
+          "label": "The update rule",
+          "rect": {
+            "x": 0.0688,
+            "y": 0.1267,
+            "w": 0.3781,
+            "h": 0.1083
+          }
+        },
+        {
+          "id": "r2",
+          "kind": "text",
+          "label": "θ ← θ − η ∇L(θ)",
+          "rect": {
+            "x": 0.1719,
+            "y": 0.2917,
+            "w": 0.6563,
+            "h": 0.2361
+          }
+        },
+        {
+          "id": "r3",
+          "kind": "text",
+          "label": "θ  the parameters we are tuning",
+          "rect": {
+            "x": 0.0875,
+            "y": 0.6121,
+            "w": 0.4453,
+            "h": 0.065
+          }
+        },
+        {
+          "id": "r4",
+          "kind": "text",
+          "label": "η  learning rate: the size of each step",
+          "rect": {
+            "x": 0.0875,
+            "y": 0.7121,
+            "w": 0.5484,
+            "h": 0.065
+          }
+        },
+        {
+          "id": "r5",
+          "kind": "text",
+          "label": "∇L(θ)  gradient: points uphill",
+          "rect": {
+            "x": 0.0875,
+            "y": 0.8121,
+            "w": 0.432,
+            "h": 0.065
+          }
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "image_url": "slides/slide-3.svg",
+      "width": 1280,
+      "height": 720,
+      "regions": [
+        {
+          "id": "r1",
+          "kind": "text",
+          "label": "Rolling downhill",
+          "rect": {
+            "x": 0.0688,
+            "y": 0.0989,
+            "w": 0.4031,
+            "h": 0.1083
+          }
+        },
+        {
+          "id": "r2",
+          "kind": "figure",
+          "label": "Loss curve with a ball rolling toward the minimum",
+          "rect": {
+            "x": 0.0547,
+            "y": 0.2361,
+            "w": 0.6016,
+            "h": 0.6944
+          }
+        },
+        {
+          "id": "r3",
+          "kind": "part",
+          "label": "Loss curve",
+          "rect": {
+            "x": 0.1016,
+            "y": 0.2778,
+            "w": 0.5469,
+            "h": 0.4861
+          }
+        },
+        {
+          "id": "r6",
+          "kind": "part",
+          "label": "Steps: large at first, then shrinking",
+          "rect": {
+            "x": 0.1836,
+            "y": 0.4167,
+            "w": 0.168,
+            "h": 0.3125
+          }
+        },
+        {
+          "id": "r4",
+          "kind": "part",
+          "label": "Ball at the starting point",
+          "rect": {
+            "x": 0.0977,
+            "y": 0.3542,
+            "w": 0.1055,
+            "h": 0.125
+          }
+        },
+        {
+          "id": "r5",
+          "kind": "part",
+          "label": "Minimum of the loss",
+          "rect": {
+            "x": 0.3281,
+            "y": 0.725,
+            "w": 0.0938,
+            "h": 0.0917
+          }
+        },
+        {
+          "id": "r7",
+          "kind": "text",
+          "label": "Big slope, big step",
+          "rect": {
+            "x": 0.6938,
+            "y": 0.3813,
+            "w": 0.1906,
+            "h": 0.0469
+          }
+        },
+        {
+          "id": "r8",
+          "kind": "text",
+          "label": "Flat slope, tiny step",
+          "rect": {
+            "x": 0.6938,
+            "y": 0.4924,
+            "w": 0.2094,
+            "h": 0.0469
+          }
+        },
+        {
+          "id": "r9",
+          "kind": "text",
+          "label": "Learning rate η: step scale",
+          "rect": {
+            "x": 0.6938,
+            "y": 0.6035,
+            "w": 0.2648,
+            "h": 0.0469
+          }
+        }
+      ]
+    }
+  ]
+}
